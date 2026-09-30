@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diario de Estudio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Diario de Estudio</h1>
+
+    <section class="card streak">
+      <p class="streak-label">Racha actual</p>
+      <p class="streak-value"><span id="streak-count">0</span> 🔥</p>
+      <p class="streak-unit" id="streak-unit">días seguidos</p>
+    </section>
+
+    <section class="card">
+      <h2>Registrar sesión</h2>
+      <form id="session-form" novalidate>
+        <label for="date">Fecha</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="topic">Tema</label>
+        <input type="text" id="topic" name="topic" placeholder="Ej.: JavaScript" maxlength="100" required>
+
+        <label for="minutes">Minutos</label>
+        <input type="number" id="minutes" name="minutes" min="1" step="1" placeholder="Ej.: 30" required>
+
+        <p class="error" id="form-error" role="alert"></p>
+        <button type="submit">Guardar sesión</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Sesiones</h2>
+      <p class="empty" id="empty-message">Todavía no has registrado ninguna sesión.</p>
+      <ul class="session-list" id="session-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
