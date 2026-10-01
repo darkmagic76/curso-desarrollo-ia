@@ -14,6 +14,32 @@
       <p class="streak-label">Racha actual</p>
       <p class="streak-value"><span id="streak-count">0</span> 🔥</p>
       <p class="streak-unit" id="streak-unit">días seguidos</p>
+      <div class="stats">
+        <p class="stat"><span class="stat-value"><span id="best-streak-count">0</span> <span id="best-streak-unit">días</span></span> <span class="stat-label">Mejor racha 🏆</span></p>
+        <p class="stat"><span class="stat-value"><span id="week-minutes">0</span> min</span> <span class="stat-label">Esta semana</span></p>
+        <p class="stat"><span class="stat-value"><span id="month-days">0</span> <span id="month-days-unit">días</span></span> <span class="stat-label">Este mes</span></p>
+      </div>
+    </section>
+
+    <section class="card heatmap-card" aria-labelledby="heatmap-title">
+      <h2 id="heatmap-title">Tus últimas 12 semanas</h2>
+      <p class="heatmap-empty" id="heatmap-empty" hidden>Registra tu primera sesión para empezar a llenar el mapa</p>
+
+      <div class="heatmap">
+        <div class="heatmap-months" id="heatmap-months" aria-hidden="true"></div>
+        <div class="heatmap-weekdays" aria-hidden="true">
+          <span>L</span><span></span><span>X</span><span></span><span>V</span><span></span><span></span>
+        </div>
+        <div class="heatmap-grid" id="heatmap-grid" role="group" aria-label="Minutos estudiados por día. Usa las flechas para moverte entre días."></div>
+      </div>
+
+      <p class="heatmap-detail" id="heatmap-detail" aria-live="polite"></p>
+
+      <div class="heatmap-legend" id="heatmap-legend">
+        <span>Menos</span>
+        <span class="heatmap-legend-cells" id="heatmap-legend-cells"></span>
+        <span>Más</span>
+      </div>
     </section>
 
     <section class="card">
@@ -40,6 +66,7 @@
     </section>
   </main>
 
+  <script src="logic.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
